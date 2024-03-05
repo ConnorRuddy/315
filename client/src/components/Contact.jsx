@@ -8,6 +8,7 @@ export default function Contact(){
     phone: "",
     message: ""
   }
+  
   const [inputs, setInputs] = useState(initInputs)
 
   function handleChange(e){

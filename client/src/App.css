@@ -1,9 +1,10 @@
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
-  font-family: Barlow;
+  font-family: "Open Sans", sans-serif;
 }
 
 input{
@@ -27,6 +28,7 @@ textarea{
 
 li{
   list-style: bullets;
+  padding: 0;
 }
 
 button{
@@ -58,12 +60,14 @@ a{
   text-decoration: none;
 }
 
+/* Color Scheme */
 header {
   height: 120px;
   display: flex;
   align-items: center;
-  background-color: #232f3e;
-  /* background-color: #146eb4; */
+  background-color: #00308F;
+  /* background-color: #232f3e; */
+  
 }
 
 header .site-logo{
@@ -86,14 +90,15 @@ header a:hover{
   text-decoration: underline;
 }
 
+/* Color Scheme */
 footer{
   height: 74px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
-  background-color: #232f3e;
-  /* background-color: #146eb4; */
+  /* background-color: #232f3e; */
+  background-color: #00308F;
 }
 
 .site-wrapper{
@@ -115,32 +120,70 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .home-img-container{
   width: 100%;
   position: relative;
   text-align: center;
+  overflow: hidden;
+
 }
 .home-pic{
+  /* width: 80%; */
   width: 100%;
   height: 80vh;
+  margin-left: 14%;
   object-fit: cover;
-  object-position:  7% 7%;
+  /* object-fit: fill; */
+  /* object-position:  (17%,17%); */
+  overflow: hidden;
 }
+
+/* Color Scheme */
+.overlay{
+  background-color: #3e8ede62;
+  /* background-color: #5B79a062; */
+  width: 100%;
+  height: 80vh;
+  
+}
+
+/* Color Scheme */
+.test1{
+position: absolute;
+background-color:#3E8EDE;
+/* background-color:#5B79A0 ; */
+top: 0;
+left: 0px;
+height: 80vh;
+width: 750px;
+transform:skew(20deg) translate(-20%,0);
+}
+
+.home-title{
+  position:absolute;
+  top: 160px;
+  left: 150px;
+  font-size: 96px;
+  color: white;
+  font-weight: 950;
+
+}
+
 .img-statement{
   position: absolute;
-  bottom: 0;
+  bottom: 250px;
+  left: 60px;
   color: white;
   font-size: 36px;
-  height: 150px;
-  width: 100%;
+  width: 800px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
   margin: 0;
-  background-color: #232f3ea8
+  font-weight: 700;
 }
 
 .home-statement{
@@ -158,56 +201,194 @@ footer{
   cursor: pointer;
 }
 
+
+
 .home-start:hover{
+  text-decoration: underline;
+  color: #ff9900;
+  transition: 0.2s;
   opacity: 1;
 }
-.home-start:active{
-  box-shadow: 0 5px;
-  transform: translateY(4px);
-  opacity: 1
+
+.home-employees{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-container{
+.employee-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 250ms;
+}
+
+.employee-container:hover{
+  transform:scale(1.2);
+  
+}
+
+.home-employees-pic{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  margin: 15px;
+  margin-right: 25px;
+  object-fit: cover;
+}
+
+#holmes{
+  object-position: 20% top;
+}
+#julia{
+  object-position: 0px -20px ;
+}
+
+.about-page-container{
   width: 100%;
   height: 100%;
+}
+.about-background{
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  padding-bottom: 30px;
+  background-position:  center; 
+  margin-bottom: 50px;
   position: relative;
 }
+.about-overlay{
+  background-color: #5B79a062; 
+  width: 100%;
+  height:40vh;
+  position: absolute;
+  top: 0;
+  padding-bottom: 30px;
+ 
+}
 
-.about-founding{
+.about-employee-pic{
+  height: 800px;
+  margin-right: 25px;
+  border-radius: 20px;
+ 
+
+}
+.about-story{
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
-
+}
+.story-tag{
+  font-size: 32px;
+  font-style: italic;
+  color:#b42c14;
 }
 
 
-.founding-text{
+.story-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height: 1.8;
   font-size: 24px;
-  width: 65%;
-  height: 100vh;
+  width: 45%;
+
   padding: 25px;
   
 
 }
 
-.about-icon{
+.story-icon{
   width: 50px;
   height:50px;
   color: #146eb4;
 }
 
-.road-img{
+/* Color Scheme */
+.team-container{
+  display: flex;
   width: 100%;
-  height: 100vh;
+  justify-content: center;
+  background-color: #3E8EDE;
+  /* background-color: #5B79A0 ; */
+  padding-top: 8%;
+}
+.mission-title{
+  font-size: 36px;
+  
+}
+.team-mission{
+width: 30%;
+height: 25%;
+padding: 20px;
+text-align: center;
+font-size: 20px;
+color: white;
+background-color: #00308f94;
+border: 6px solid #00308F;
+
+}
+.team-button{
+  width: 150px;
+}
+.team-pics{
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left: 5%;
+  
+  
+}
+
+.pic-container{
+  height: 550px;
+  width: 300px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: 2px solid #00308F;
 
 }
 
+.mgmt-pic{
+  height:300px;
+  width:300px;
+ object-fit: cover;
+ object-position:top ;
+  
+}
+
+.mgmt-list{
+  list-style: none;
+  padding: 0;
+
+}
+
+.mgmt-list-item{
+  list-style: none;
+  padding: 0;
+}
+
+#mgmt-name{
+font-size: 32px;
+}
+#mgmt-position{
+margin-bottom: 15px;
+}
+#mgmt-desc{
+
+}
 .overlay{
   width: 100%;
   height: 100%;
@@ -226,19 +407,20 @@ height: 100vh;
   width: 100%;
 }
 
+/* Color Scheme */
 .career-main {
   height: 80vh;
   width: 100%;
   display: flex;
   justify-content:space-evenly;
   align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:  center; 
+  background-color: #3E8EDE;
+  /* background-color: #5B79A0; */
+  color: white;
   margin-bottom: 2%;
 }
 
-.career-main li{
+/* .career-main li{
   list-style: none;
 }
 .career-main h4{
@@ -251,7 +433,7 @@ height: 100vh;
   margin-inline-start: 10px;
   margin-inline-end: 50px;
   border-bottom: black solid 1px;
-}
+} */
 
 
 .career-statement{
@@ -259,17 +441,13 @@ height: 100vh;
   font-size: 36px;
   line-height: 1.8;
   margin: 0;
-  background-color: #232f3eaf;
-  color: white;
   padding: 25px;
   border-radius: 10px;
   font-weight: 900;
 }
 
-.career-statement h5 {
-}
 
-.main-text{
+/* .main-text{
   width: 32%;
   background-color: rgba(255, 255, 255, 0.849);
   display: flex;
@@ -317,8 +495,21 @@ list-style: circle;
 
 .station-list li{
   list-style: none;
-}
+} */
 
+.career-pic{
+  width:600px;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.packages{
+  height: 750px;
+  margin: 5px;
+  border-radius: 15px;;
+}
 
 
 .career-hero-container{
@@ -342,9 +533,10 @@ list-style: circle;
  
 }
 
+/* Color Scheme */
 .job-detail h4{
   text-align: center;
-  background-color:#146eb4;
+  background-color:#00308F;
   color: white;
   padding: 0;
   margin: 0px;

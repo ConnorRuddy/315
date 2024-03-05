@@ -1,8 +1,7 @@
 import React from 'react'
-import road from '../images/road.jpg'
-import beach from '../images/beach.jpeg'
+import amazon from '../images/amazon.jpg'
 import {Link} from 'react-router-dom'
-import { FaMapMarkerAlt } from "react-icons/fa";
+import packages from '../images/packages.jpg'
 
 
 
@@ -10,13 +9,15 @@ export default function Career(){
   return(
     <>
     <div className="career-container">
-      <div className="career-main" style={{backgroundImage: `url(${beach})`}}>
-          <h5 className="career-statement" >
-            315 Logistics, an Amazon Delivery Service Partner, is looking for reliable, independent, flexible, hard
+      <div className="career-main" >
+          <p className="career-statement" >
+            315 Logistics, is looking for reliable, independent, flexible, hard
             workers who pay attention to details, can quickly problem solve a wide range of situations, and win in a
-            fast-paced environment! <i className="home-start">Apply Now!</i></h5>
-
-        <div className="main-text">
+            fast-paced environment! <i className="home-start">Apply Now!</i></p>
+        <div className='career-pic'>
+          <img src={packages} className='packages' />
+          </div>
+        {/* <div className="main-text">
           <h4>Delivery Stations:</h4>
           <ul>
          <div className="station-list"><li><FaMapMarkerAlt className="location-marker" />DOR1 Chesapeake, VA - 1920 Campostella Rd, Chesapeake, VA 23324;</li>
@@ -40,7 +41,7 @@ Vision Insurance available</li>
 <h3>Military veterans are welcome!</h3>
 <h3>No experience required!</h3>
 </div>
-</div>
+</div> */}
           </div>
         </div>
       <div className="career-hero-container">
